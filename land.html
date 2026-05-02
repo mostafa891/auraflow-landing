@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraFlow - All-in-One Tool for Freelancers | Founding Members</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+                        accent: { 50: '#fff7ed', 100: '#ffedd5', 200: '#fed7aa', 300: '#fdba74', 400: '#fb923c', 500: '#f97316', 600: '#ea580c', 700: '#c2410c', 800: '#9a3412', 900: '#7c2d12' }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
+                        fadeIn: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        slideUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%); }
+        .glass-effect { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .mockup-shadow { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05); }
+        .btn-glow { box-shadow: 0 0 20px rgba(14, 165, 233, 0.4); transition: all 0.3s ease; }
+        .btn-glow:hover { box-shadow: 0 0 30px rgba(14, 165, 233, 0.6); transform: translateY(-2px); }
+        .form-input:focus { outline: none; border-color: #0ea5e9; }
+        .hidden-form { display: none; opacity: 0; transform: translateY(20px); }
+        .visible-form { display: block; animation: slideUp 0.5s ease-out forwards; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f0f9ff; }
+        ::-webkit-scrollbar-thumb { background: #38bdf8; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0ea5e9; }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen font-sans text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">A</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">AuraFlow</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#problem" class="text-gray-600 hover:text-primary-600 transition-colors font-medium">Problem</a>
+                    <a href="#solution" class="text-gray-600 hover:text-primary-600 transition-colors font-medium">Solution</a>
+                    <a href="#offer" class="text-gray-600 hover:text-primary-600 transition-colors font-medium">Founding Members</a>
+                    <a href="#signup" class="bg-primary-600 text-white px-5 py-2 rounded-full font-medium hover:bg-primary-700 transition-all btn-glow">Apply for Early Access</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8 animate-fade-in">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 font-medium text-sm border border-primary-200">
+                    <span class="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse"></span>
+                    Accepting only the first 100 Founding Members
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                    The Only <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500">All-in-One</span> Tool Freelancers Actually Need
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl">
+                    Stop juggling between Trello, Excel, and Behance. AuraFlow combines project management, invoicing, magic links, and auto-portfolios in one beautiful workspace.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#signup" class="inline-flex justify-center items-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-all btn-glow text-lg">
+                        Become a Founding Member
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+                <!-- Honest Social Proof -->
+                <div class="flex items-center space-x-4 pt-4">
+                    <div class="text-sm text-gray-600 bg-white/60 px-4 py-2 rounded-lg border border-gray-200">
+                        <span class="font-bold text-primary-600">Built in Public:</span> We are co-creating this tool with freelancers, for freelancers. No fake numbers, just real solutions.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative lg:h-[600px] animate-fade-in" style="animation-delay: 0.2s;">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary-200 to-accent-200 rounded-3xl transform rotate-3 opacity-40"></div>
+                <div class="relative glass-effect rounded-3xl p-6 mockup-shadow h-full flex items-center justify-center">
+                    <!-- Placeholder for the clean screenshot we discussed -->
+                    <img src="dashboard.png" 
+                        alt="AuraFlow Dashboard Mockup" 
+                        class="rounded-2xl w-full max-w-md mx-auto object-contain border border-gray-700 shadow-2xl animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white/50 backdrop-blur-sm rounded-3xl my-12">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Sound Familiar? You're Losing <span class="text-accent-500">7+ Hours Every Week</span> to Tool Chaos
+            </h2>
+            <p class="text-lg text-gray-600">
+                81% of freelancers use 4+ disconnected apps to run their business. This fragmentation kills productivity and costs you thousands in lost billable hours.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Problem Card 1 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-red-200 group">
+                <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Cognitive Switching Fatigue</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Constantly jumping between Trello, Excel, Notion, and Gmail drains your mental energy. Studies show context switching reduces productivity by up to 40%.
+                </p>
+                <div class="mt-6 pt-6 border-t border-gray-100">
+                    <div class="flex items-center text-sm text-red-600 font-medium">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                        </svg>
+                        2-3 hours lost daily to app switching
+                    </div>
+                </div>
+            </div>
+
+            <!-- Problem Card 2 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-orange-200 group">
+                <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Manual Admin Hell</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Creating invoices in Word, tracking payments in spreadsheets, and manually updating clients via email is not scalable. One mistake can cost you hundreds in lost revenue.
+                </p>
+                <div class="mt-6 pt-6 border-t border-gray-100">
+                    <div class="flex items-center text-sm text-orange-600 font-medium">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                        </svg>
+                        $250-700/month in lost billable time
+                    </div>
+                </div>
+            </div>
+
+            <!-- Problem Card 3 -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-yellow-200 group">
+                <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Portfolio Never Gets Updated</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Your best work sits in completed project folders while your portfolio stays outdated. You're losing high-paying clients because they can't see your latest impressive work.
+                </p>
+                <div class="mt-6 pt-6 border-t border-gray-100">
+                    <div class="flex items-center text-sm text-yellow-600 font-medium">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                        </svg>
+                        73% of freelancers have outdated portfolios
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution & Mockups Section -->
+    <section id="solution" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                One Workspace. Zero Chaos. <span class="text-primary-500">Infinite Productivity.</span>
+            </h2>
+            <p class="text-lg text-gray-600">
+                AuraFlow integrates internal productivity tools with external client-facing features — something no other freelancer tool does today.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Feature 1: Kanban Board -->
+            <div class="group">
+                <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="aspect-video bg-gray-50 rounded-xl overflow-hidden mb-4">
+                        <img src="https://placehold.co/400x225/f0f9ff/0284c7?text=Kanban+Board&font=inter" 
+                            alt="Kanban Board Mockup" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Kanban Project Board</h3>
+                    <p class="text-sm text-gray-600">
+                        Visual task management designed for solo workflows, not enterprise teams. Drag, drop, done.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 2: Magic Links -->
+            <div class="group">
+                <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="aspect-video bg-gray-50 rounded-xl overflow-hidden mb-4">
+                        <img src="https://placehold.co/400x225/f0fdf4/166534?text=Magic+Link+Portal&font=inter" 
+                            alt="Magic Link Client Portal Mockup" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Magic Link Sharing</h3>
+                    <p class="text-sm text-gray-600">
+                        Share project progress with clients via secure links — no login required. 60% higher client engagement.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3: Invoicing -->
+            <div class="group">
+                <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="aspect-video bg-gray-50 rounded-xl overflow-hidden mb-4">
+                        <img src="https://placehold.co/400x225/fff7ed/c2410c?text=Smart+Invoicing&font=inter" 
+                            alt="Invoicing System Mockup" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Integrated Invoicing</h3>
+                    <p class="text-sm text-gray-600">
+                        Generate professional invoices from completed tasks in one click. Track payments and send reminders automatically.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 4: Auto Portfolio -->
+            <div class="group">
+                <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="aspect-video bg-gray-50 rounded-xl overflow-hidden mb-4">
+                        <img src="https://placehold.co/400x225/fae8ff/9333ea?text=Auto+Portfolio+Builder&font=inter" 
+                            alt="Auto Portfolio Builder Mockup" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Auto Portfolio Builder</h3>
+                    <p class="text-sm text-gray-600">
+                        Completed projects automatically turn into stunning case studies. Your portfolio updates itself as you work.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Big Mockup Showcase -->
+        <div class="mt-20 relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-100 via-transparent to-accent-100 rounded-3xl transform -rotate-1 opacity-50"></div>
+            <div class="relative grid lg:grid-cols-3 gap-8 items-center">
+                <div class="lg:col-span-2">
+                    <div class="glass-effect rounded-3xl p-4 mockup-shadow">
+                        <img src="mockup.png" 
+                            alt="AuraFlow Full Workspace" 
+                            class="rounded-2xl w-full object-contain">
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Internal + External Integration</h4>
+                            <p class="text-sm text-gray-600 mt-1">First tool to combine internal task management with client-facing portals in one workspace.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Built for Solo Freelancers</h4>
+                            <p class="text-sm text-gray-600 mt-1">No team bloat. No enterprise complexity. Just the features you actually use every day.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Saves $100+/Month</h4>
+                            <p class="text-sm text-gray-600 mt-1">Replace 4-5 separate subscriptions with one affordable plan starting at just $19/month.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Launch Offer & Signup Section (Refactored for Founding Members) -->
+    <section id="offer" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-20">
+        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 p-8 sm:p-12 lg:p-16">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
+            
+            <div class="relative grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white space-y-8">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium">
+                        <svg class="w-4 h-4 mr-2 text-accent-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                        </svg>
+                        Exclusive Founding Member Invitation
+                    </div>
+                    
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+                        Help us build the perfect tool, get <span class="text-accent-300">VIP Access</span> & perks.
+                    </h2>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-2xl mt-0.5">🗺️</span>
+                            <span class="text-lg"><strong>Shape the Roadmap:</strong> Your feedback directly decides what we code next.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-2xl mt-0.5">🚀</span>
+                            <span class="text-lg"><strong>Early Beta Access:</strong> Use the tool before anyone else gets to see it.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-2xl mt-0.5">🎁</span>
+                            <span class="text-lg"><strong>Up to 3 Months Free:</strong> As a thank you for your feedback during beta testing.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Signup Forms Container -->
+                <div id="signup" class="relative">
+                    
+                    <!-- Form 1: The Waitlist -->
+                    <div id="initial-form" class="visible-form bg-white rounded-2xl p-8 shadow-2xl">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Apply for Founding Access</h3>
+                            <p class="text-gray-600">Reserve your spot before the 100-member cap.</p>
+                        </div>
+                        
+                        <form id="waitlist-form" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all form-input" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Work Email</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all form-input" placeholder="you@freelance.dev">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">I specialize in...</label>
+                                <select name="role" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all form-input bg-white">
+                                    <option value="">Select your craft</option>
+                                    <option value="developer">Software Development</option>
+                                    <option value="designer">UI/UX & Design</option>
+                                    <option value="writer">Content & Copywriting</option>
+                                    <option value="marketer">Marketing & SEO</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-gray-900 text-white font-bold py-4 px-6 rounded-xl hover:bg-gray-800 transition-all transform hover:scale-[1.02] shadow-lg mt-2">
+                                Secure My Spot →
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Success State -->
+                    <div id="success-state" class="hidden-form bg-white rounded-2xl p-8 shadow-2xl text-center">
+                        <div class="text-5xl mb-4">🎉</div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Spot Secured!</h3>
+                        <p class="text-gray-600 mb-6">You are on the list. But wait, as a Founding Member, we need your input right now to prioritize our first sprint.</p>
+                        <button id="show-feedback-btn" class="w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white font-bold py-4 px-6 rounded-xl hover:from-primary-700 hover:to-primary-800 transition-all transform hover:scale-[1.02] shadow-lg">
+                            Vote on the First Feature 🗳️
+                        </button>
+                    </div>
+
+                    <!-- Form 2: The Micro-Survey (Actionable Data) -->
+                    <!-- Form 2: The Micro-Survey (Actionable Data) -->
+                    <!-- Form 2: The Micro-Survey (5 Dimensions) -->
+                    <div id="feedback-form-container" class="hidden-form bg-white rounded-2xl p-8 shadow-2xl border border-gray-100">
+                        <div class="mb-6 border-b border-gray-100 pb-4">
+                            <div class="inline-flex items-center px-3 py-1 rounded-full bg-primary-50 text-primary-600 text-xs font-bold uppercase tracking-wide mb-3">
+                                Founding Member Survey
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Shape the Future of AuraFlow</h3>
+                            <p class="text-sm text-gray-500 mt-1">Takes 45 seconds. Your input directly decides our next sprint.</p>
+                        </div>
+                        
+                        <form id="feedback-form" class="space-y-6 mt-4">
+        
+                            <!-- هندسة الشبكة: عمود واحد للموبايل، عمودين للكمبيوتر -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                
+                                <!-- Dimension 1: Priority -->
+                                <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 flex flex-col justify-between">
+                                    <label class="block text-sm font-bold text-gray-800 mb-3">1. One feature to launch next month?</label>
+                                    <div class="space-y-2">
+                                        <label class="flex items-center p-2.5 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all">
+                                            <input type="radio" name="priority_feature" value="kanban" class="w-4 h-4 text-primary-600" required>
+                                            <span class="ml-3 text-xs font-medium text-gray-700">Clean Task/Kanban board</span>
+                                        </label>
+                                        <label class="flex items-center p-2.5 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all">
+                                            <input type="radio" name="priority_feature" value="invoicing" class="w-4 h-4 text-primary-600">
+                                            <span class="ml-3 text-xs font-medium text-gray-700">1-Click Smart Invoicing</span>
+                                        </label>
+                                        <label class="flex items-center p-2.5 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all">
+                                            <input type="radio" name="priority_feature" value="magic_link" class="w-4 h-4 text-primary-600">
+                                            <span class="ml-3 text-xs font-medium text-gray-700">Client "Magic Link" portals</span>
+                                        </label>
+                                    </div>
+                                </div>
+                    
+                                <!-- Dimension 2: Pain Level -->
+                                <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 flex flex-col justify-between">
+                                    <label class="block text-sm font-bold text-gray-800 mb-3">2. How many tools do you juggle?</label>
+                                    <div class="space-y-2 mt-auto">
+                                        <label class="flex items-center p-2.5 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all">
+                                            <input type="radio" name="tools_count" value="1-2" class="w-4 h-4 text-primary-600" required>
+                                            <span class="ml-3 text-xs font-medium text-gray-700">1-2 tools (Keeping it simple)</span>
+                                        </label>
+                                        <label class="flex items-center p-2.5 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all">
+                                            <input type="radio" name="tools_count" value="3-4" class="w-4 h-4 text-primary-600">
+                                            <span class="ml-3 text-xs font-medium text-gray-700">3-4 tools (It's getting messy)</span>
+                                        </label>
+                                        <label class="flex items-center p-2.5 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all">
+                                            <input type="radio" name="tools_count" value="5+" class="w-4 h-4 text-primary-600">
+                                            <span class="ml-3 text-xs font-medium text-gray-700">5+ tools (Absolute chaos)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                    
+                                <!-- Dimension 3: Willingness to Pay -->
+                                <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 flex flex-col justify-between">
+                                    <label class="block text-sm font-bold text-gray-800 mb-3">3. Monthly spend on freelance tools?</label>
+                                    <div class="grid grid-cols-2 gap-2 mt-auto">
+                                        <label class="flex items-center justify-center p-2 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all text-center">
+                                            <input type="radio" name="budget" value="0" class="sr-only" required>
+                                            <span class="text-xs font-medium text-gray-700">$0 (Free only)</span>
+                                        </label>
+                                        <label class="flex items-center justify-center p-2 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all text-center">
+                                            <input type="radio" name="budget" value="10-30" class="sr-only">
+                                            <span class="text-xs font-medium text-gray-700">$10 - $30/mo</span>
+                                        </label>
+                                        <label class="flex items-center justify-center p-2 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all text-center">
+                                            <input type="radio" name="budget" value="30-100" class="sr-only">
+                                            <span class="text-xs font-medium text-gray-700">$30 - $100/mo</span>
+                                        </label>
+                                        <label class="flex items-center justify-center p-2 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all text-center">
+                                            <input type="radio" name="budget" value="100+" class="sr-only">
+                                            <span class="text-xs font-medium text-gray-700">$100+/mo</span>
+                                        </label>
+                                    </div>
+                                </div>
+                    
+                                <!-- Dimension 4: Churn Prevention -->
+                                <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 flex flex-col justify-between">
+                                    <label class="block text-sm font-bold text-gray-800 mb-3">4. Absolute "Dealbreaker" in a tool?</label>
+                                    <div class="space-y-2 mt-auto">
+                                        <label class="flex items-center p-2.5 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all">
+                                            <input type="radio" name="dealbreaker" value="bloated_ui" class="w-4 h-4 text-primary-600" required>
+                                            <span class="ml-3 text-xs font-medium text-gray-700">Slow & bloated UI</span>
+                                        </label>
+                                        <label class="flex items-center p-2.5 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all">
+                                            <input type="radio" name="dealbreaker" value="no_mobile" class="w-4 h-4 text-primary-600">
+                                            <span class="ml-3 text-xs font-medium text-gray-700">No mobile experience</span>
+                                        </label>
+                                        <label class="flex items-center p-2.5 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-primary-400 hover:shadow-sm transition-all">
+                                            <input type="radio" name="dealbreaker" value="rigid_workflows" class="w-4 h-4 text-primary-600">
+                                            <span class="ml-3 text-xs font-medium text-gray-700">Rigid/Uncustomizable</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                            </div> <!-- End of Grid -->
+                    
+                            <!-- Dimension 5: The Magic Wand (Full Width) -->
+                            <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 mt-5">
+                                <label class="block text-sm font-bold text-gray-800 mb-2">5. The "Magic Wand": What frustrating task should we automate forever?</label>
+                                <textarea name="magic_wand" rows="2" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-500 transition-all resize-none text-sm bg-white" placeholder="e.g., Chasing clients for unpaid invoices..."></textarea>
+                            </div>
+                    
+                            <button type="submit" class="w-full bg-gray-900 text-white font-bold py-4 px-6 rounded-xl hover:bg-gray-800 transition-all transform hover:scale-[1.02] shadow-lg flex justify-center items-center mt-6">
+                                Submit Vote & Claim VIP Access 🚀
+                            </button>
+                    
+                            <!-- CSS مدمج لإبراز الأزرار المختارة في سؤال الميزانية -->
+                            <style>
+                                input[type="radio"]:checked + span { color: #0ea5e9; font-weight: 700; }
+                                label:has(input[type="radio"]:checked) { border-color: #0ea5e9; background-color: #f0f9ff; }
+                            </style>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Architecture for API Connection -->
+    <script>
+        
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzJQ9mDo-ZHNknZxZc5voDa4YStpDzRLsGLX99fvibodU4gwSX3-No_73zN4wF8q9v5/exec';
+
+        const initialForm = document.getElementById('initial-form');
+        const successState = document.getElementById('success-state');
+        const showFeedbackBtn = document.getElementById('show-feedback-btn');
+        const feedbackContainer = document.getElementById('feedback-form-container');
+        const waitlistForm = document.getElementById('waitlist-form');
+        const feedbackForm = document.getElementById('feedback-form');
+
+        // دالة مساعدة للاتصال بالشبكة - O(1) Data prep
+        async function submitToGoogle(data, buttonElement, originalText) {
+            buttonElement.innerHTML = 'Processing... ⌛';
+            buttonElement.disabled = true;
+
+            try {
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    // لا تستخدم 'cors' mode مع Google Script من الواجهة الأمامية بدون سيرفر وسيط، 
+                    // استخدم 'no-cors' لتجنب أخطاء المتصفح، ولكن تذكر أنك لن تستطيع قراءة الرد.
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                return true;
+            } catch (error) {
+                console.error('API Error:', error);
+                buttonElement.innerHTML = originalText;
+                buttonElement.disabled = false;
+                alert('Something went wrong. Please try again.');
+                return false;
+            }
+        }
+
+        // Form 1: Waitlist Submit
+        waitlistForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = waitlistForm.querySelector('button[type="submit"]');
+            const formData = new FormData(waitlistForm);
+            
+            const payload = {
+                type: 'waitlist',
+                name: formData.get('name'),
+                email: formData.get('email'),
+                role: formData.get('role')
+            };
+
+            const isSuccess = await submitToGoogle(payload, submitBtn, submitBtn.innerHTML);
+            
+            if (isSuccess) {
+                // حفظ الإيميل مؤقتاً لربطه بالتقييم لاحقاً
+                localStorage.setItem('auraflow_email', payload.email);
+                initialForm.classList.remove('visible-form');
+                initialForm.classList.add('hidden-form');
+                successState.classList.remove('hidden-form');
+                successState.classList.add('visible-form');
+            }
+        });
+
+        // Toggle to Survey
+        showFeedbackBtn.addEventListener('click', () => {
+            successState.classList.remove('visible-form');
+            successState.classList.add('hidden-form');
+            feedbackContainer.classList.remove('hidden-form');
+            feedbackContainer.classList.add('visible-form');
+        });
+
+        // Form 2: Survey Submit
+        // Form 2: Survey Submit
+        // Form 2: Survey Submit (5 Dimensions)
+    feedbackForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = feedbackForm.querySelector('button[type="submit"]');
+        const formData = new FormData(feedbackForm);
+        
+        const payload = {
+            type: 'feedback',
+            email: localStorage.getItem('auraflow_email') || 'unknown',
+            priority_feature: formData.get('priority_feature'),
+            tools_count: formData.get('tools_count'),
+            budget: formData.get('budget'),             // الحقل الجديد
+            dealbreaker: formData.get('dealbreaker'),   // الحقل الجديد
+            magic_wand: formData.get('magic_wand')
+        };
+
+        const isSuccess = await submitToGoogle(payload, submitBtn, submitBtn.innerHTML);
+        
+        if (isSuccess) {
+            feedbackContainer.innerHTML = `
+                <div class="text-center py-10">
+                    <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 border border-green-100">
+                        <span class="text-4xl">🚀</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Thank you, Founding Member!</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Your insights are pure gold. We are prioritizing our development based on your vote.</p>
+                    <div class="inline-block bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 mt-2 text-sm text-gray-500 font-medium">
+                        We'll email you the moment your early-access workspace is ready.
+                    </div>
+                </div>
+            `;
+        }
+    });
+
+    </script>
+</body>
+</html>
