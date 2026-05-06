@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AuraFlow - All-in-One Tool for Freelancers | Founding Members</title>
+    
+    <!-- SEO & Social Meta Tags -->
+    <meta name="description" content="AuraFlow is the ultimate all-in-one workspace for freelancers. Manage projects, send invoices, and build your portfolio automatically.">
+    <meta property="og:title" content="AuraFlow - All-in-One Tool for Freelancers">
+    <meta property="og:description" content="Stop juggling 5+ apps. Join 100 founding members shaping the future of freelance productivity.">
+    <meta property="og:image" content="assets/dashboard.png">
+    <meta property="og:url" content="https://auraflow.io">
+    <meta name="twitter:card" content="summary_large_image">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,9 +71,30 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#problem" class="text-gray-600 hover:text-primary-600 transition-colors font-medium">Problem</a>
                     <a href="#solution" class="text-gray-600 hover:text-primary-600 transition-colors font-medium">Solution</a>
+                    <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors font-medium">Roadmap</a>
                     <a href="#offer" class="text-gray-600 hover:text-primary-600 transition-colors font-medium">Founding Members</a>
                     <a href="#signup" class="bg-primary-600 text-white px-5 py-2 rounded-full font-medium hover:bg-primary-700 transition-all btn-glow">Apply for Early Access</a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-toggle" class="text-gray-600 hover:text-primary-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect border-t border-gray-100 animate-slide-up">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-xl">
+                <a href="#problem" class="block px-3 py-4 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all">Problem</a>
+                <a href="#solution" class="block px-3 py-4 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all">Solution</a>
+                <a href="#" class="block px-3 py-4 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all">Roadmap</a>
+                <a href="#offer" class="block px-3 py-4 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all">Founding Members</a>
+                <a href="#signup" class="block px-3 py-4 text-base font-bold text-primary-600 bg-primary-50 rounded-xl transition-all">Apply for Early Access</a>
             </div>
         </div>
     </nav>
@@ -312,6 +342,36 @@
     </section>
     
 
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <p class="text-gray-600">Everything you need to know about the AuraFlow Founding Members program.</p>
+        </div>
+        
+        <div class="space-y-6">
+            <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/40 shadow-sm hover:shadow-md transition-all">
+                <h3 class="text-lg font-bold text-gray-900 mb-2">When is the official launch?</h3>
+                <p class="text-gray-600">We are currently in private development. Our Founding Members will get beta access in early Q3 2026, with a public launch scheduled for late 2026.</p>
+            </div>
+            
+            <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/40 shadow-sm hover:shadow-md transition-all">
+                <h3 class="text-lg font-bold text-gray-900 mb-2">What does "Founding Member" actually mean?</h3>
+                <p class="text-gray-600">Founding Members are our first 100 users. You get a lifetime "Founding Member" badge, direct access to the founders, and the ability to vote on every new feature we build.</p>
+            </div>
+            
+            <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/40 shadow-sm hover:shadow-md transition-all">
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Is my data safe and private?</h3>
+                <p class="text-gray-600">Absolutely. We use enterprise-grade encryption for all project data and never share your client information with third parties. Your "Magic Links" are secured with unique hash tokens.</p>
+            </div>
+
+            <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/40 shadow-sm hover:shadow-md transition-all">
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Will there be a free version?</h3>
+                <p class="text-gray-600">Yes! We will always have a generous "Solo Starter" plan. Founding Members, however, will receive 3 months of our "Pro" plan for free as a thank you.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Launch Offer & Signup Section (Refactored for Founding Members) -->
     <section id="offer" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-20">
         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 p-8 sm:p-12 lg:p-16">
@@ -524,6 +584,30 @@
         const feedbackContainer = document.getElementById('feedback-form-container');
         const waitlistForm = document.getElementById('waitlist-form');
         const feedbackForm = document.getElementById('feedback-form');
+
+        // Mobile Menu Logic
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // Change to 'X'
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7'); // Change back to Hamburger
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            });
+        });
 
         // دالة مساعدة للاتصال بالشبكة - O(1) Data prep
         async function submitToGoogle(data, buttonElement, originalText) {
